@@ -19,21 +19,25 @@ void BST::insert(int key)
 void BST::printPreorder()
 {
 	printPreorder(root);
+	std::cout << std::endl;
 }
 
 void BST::printInorder()
 {
 	printInorder(root);
+	std::cout << std::endl;
 }
 
 void BST::printPostorder()
 {
 	printPostorder(root);
+	std::cout << std::endl;
 }
 
 void BST::printLevelOrder()
 {
 	printLevelOrder(root);
+	std::cout << std::endl;
 }
 
 int BST::getHeight()

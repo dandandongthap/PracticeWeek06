@@ -6,6 +6,10 @@ using namespace std;
 int main()
 {
 	BST tree;
+	int key = 0;
+	int deleted = 0;
+	int value = 0;
+	int replaced = 0;
 
 	tree.insert(20);
 	tree.insert(25);
@@ -18,16 +22,16 @@ int main()
 	cout << "Preorder:\t";
 	tree.printPreorder();
 
-	cout << "\nInorder:\t";
+	cout << "Inorder:\t";
 	tree.printInorder();
 
-	cout << "\nPostorder:\t";
+	cout << "Postorder:\t";
 	tree.printPostorder();
 
-	cout << "\nLevel order:\t";
+	cout << "Level order:\t";
 	tree.printLevelOrder();
 
-	cout << "\nHeight of BST: " << tree.getHeight() << endl;
+	cout << "Height of BST: " << tree.getHeight() << endl;
 
 	cout << "Number of nodes: " << tree.countNodes() << endl;
 
@@ -39,22 +43,19 @@ int main()
 	}
 	//else 
 
-	int key = 20;
-
+	key = 10;
 	cout << "Height of " << key << ": " << tree.findHeight(key) << endl;
 
-	cout << "The tree after " << key << " deleted:\nLevel Order:\t";
-	tree.deleteNode(20);
+	deleted = 20;
+	cout << "The tree after " << deleted << " deleted:\nLevel Order:\t";
+	tree.deleteNode(deleted);
 	tree.printLevelOrder();
-	cout << endl;
 
-	int replaced = 10;
-	int value = 17;
-
+	replaced = 10;
+	value = 17;
 	cout << "The tree after replaced " << replaced << " with " << value << ":\nLevel Order:\t";
 	tree.search(10)->key = value;
 	tree.printLevelOrder();
-	cout << endl;
 
 	if (!tree.isBST())
 	{
