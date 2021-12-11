@@ -93,7 +93,7 @@ void BST::insert(Node*& root, int key)
 			insert(root->left, key);
 		}
 	}
-	else
+	else if (key > root->key)
 	{
 		if (!root->right)
 		{

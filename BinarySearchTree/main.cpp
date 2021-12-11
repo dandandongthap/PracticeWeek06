@@ -18,6 +18,7 @@ int main()
 	tree.insert(30);
 	tree.insert(18);
 	tree.insert(5);
+	tree.insert(10);
 
 	cout << "Preorder:\t";
 	tree.printPreorder();
